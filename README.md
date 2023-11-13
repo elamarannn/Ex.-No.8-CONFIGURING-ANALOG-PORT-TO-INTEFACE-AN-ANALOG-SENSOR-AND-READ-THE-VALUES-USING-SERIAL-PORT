@@ -1,4 +1,4 @@
-**** 
+![280911771-646c31fe-f864-4585-8f76-6990691dbc77](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/93fd6c09-46fc-410d-a02b-5780ee10f5c8)**** 
 
 
 ### Ex. No. :8 CONFIGURING ANALOG PORT TO INTEFACE AN ANALOG SENSOR AND READ THE VALUES USING SERIAL PORT
@@ -150,16 +150,57 @@ This module also includes a potentiometer that will fix the threshold value, & t
 
 
 ##  Program 
+```
+Developed  By   :ADHITHIYAN.K
+Register Number :212222230006
+#include "main.h"
+#include"stdio.h"
+uint32_t adcvalue;
+#if defined (_ICCARM) || defined (_ARMCC_VERSION)
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#elif defined(_GNUC_)
+   
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#endif  
 
+while(1)
+{
 
+	HAL_ADC_Start(&hadc1);
+			HAL_ADC_PollForConversion(&hadc1,100);
+			adcvalue = HAL_ADC_GetValue(&hadc1);
+			HAL_ADC_Stop(&hadc1);
+			HAL_Delay(500);
+			printf("ADC VALUE:%ld\n",adcvalue);
+
+}
+
+PUTCHAR_PROTOTYPE
+{
+
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF);
+
+  return ch;
+}
+```
  
-
-## Result :
  
 ## Output  :
+## Board Settings and its connections:
+![280911379-b05fcf51-e3ba-489d-a0da-aaefb607242e](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/0f303155-a7d9-4530-b1f3-6f473f0f3a7e)
+![280911410-c246809f-1146-4989-a8b9-e0a929dd9d48](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/aff33aca-ebe4-4b41-9714-ed6d905fe47c)
+![280911433-f314ee72-a930-4b81-a49d-46c240df8a2a](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/a60517b6-83da-48c9-ad85-d099695e9eae)
+## Normal ADC Value:
+![280911514-ab9d43b5-aadc-441b-a7e4-9891d9ca3bdf](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/f1611d7d-4e39-4f29-a6ba-5c2d57c5e612)
+## After Light Dipping of soil-moisture-sensor-device in water:
+![280911606-f9cdfcfa-8501-41a6-a1da-865262e0d13a](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/ec75027a-18bc-4c0b-90c9-880dc28a089d)
+![280911649-1bdd7b7f-22c7-47e5-909f-8d7077c45de5](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/e6851d08-1824-42d3-b641-9f0b42e02c2e)
+## After Deep Dipping of soil-moisture-sensor-device in water:
+![280911738-de1e10f8-388d-482d-9e4b-ffbd558e872a](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/571d088e-f19e-46aa-9b73-c3ac8a8f53ea)
+![280911771-646c31fe-f864-4585-8f76-6990691dbc77](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/fa8cb079-79e8-4d0b-abb4-106a0e05f73e)
 
-
-
+Result :
+Hence,the configuring analog port to inteface an analog sensor and read the values using serial port runned successfully.
 
 
 
