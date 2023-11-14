@@ -195,7 +195,8 @@ PUTCHAR_PROTOTYPE
 ![280911771-646c31fe-f864-4585-8f76-6990691dbc77](https://github.com/elamarannn/Ex.-No.8-CONFIGURING-ANALOG-PORT-TO-INTEFACE-AN-ANALOG-SENSOR-AND-READ-THE-VALUES-USING-SERIAL-PORT/assets/113497531/fa8cb079-79e8-4d0b-abb4-106a0e05f73e)
 
 Result :
-Hence,the configuring analog port to inteface an analog sensor and read the values using serial port runned successfully.
+
+ence,the configuring analog port to inteface an analog sensor and read the values using serial port runned successfully.
 
 
 
