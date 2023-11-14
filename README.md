@@ -196,7 +196,7 @@ PUTCHAR_PROTOTYPE
 
 Result :
 
-ence,the configuring analog port to inteface an analog sensor and read the values using serial port runned successfully.
+Hence,the configuring analog port to inteface an analog sensor and read the values using serial port runned successfully.
 
 
 
